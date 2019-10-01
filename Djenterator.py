@@ -24,41 +24,40 @@ def tabHeader(measures,beats):
 			print('--' * ((beats * 4) - 1) + '-|', end = '')
 		print('')
 
-#create list of each 4-space permunation of binary states
+# create list of each 4-space permunation of binary states
 perms = ["-".join(seq) for seq in itertools.product('0-', repeat=4)]
 
-#define the different tunings
+# define the different tunings
 tunings = {
 		'std':['E', 'A', 'D', 'G', 'b', 'e'],
 		'dropD':['D', 'A', 'D', 'G', 'B', 'e'],
 		'std7':['B', 'E', 'A', 'D', 'G', 'b', 'e'],
 		'dropA':['A', 'E', 'A', 'D', 'G', 'b', 'e']}
 
-#data entry set up
+# data entry
 print("please enter your tuning below.\n")
 for k, v in tunings.items():
 	print("type {} for {}".format(k,v))
 choice = input("\nWhich tuning are you using? ")
-
 if choice in tunings:
 	tuning_select = tunings[choice]
 else:
 	print("\n\nPlease Check spelling. Choice not available.\n")
 
-#how many riffs do you want?
+# how many riffs do you want?
 RiffCount = int(input('\nhow many riffs do you want? '))
 
-#how many measures long?
+# how many measures long?
 measures = int(input('\nwe are in 4/4. How many measures do you want? '))
-beats = 4 #we are in 4/4 afterall...
+beats = 4  # we are in 4/4
 
-#to compile 4 measures, I need 16 sets of 16th notes
+# to compile 4 measures, I need 16 sets of 16th notes
 print('\n\n' + "On a {} string guitar, play:".format(len(tuning_select)))
 for i in range(0, RiffCount):
 	# initialize riff
 	riff = []
 
-	#this is for random riffs in random orders
+	# this is for random riffs in random orders
 	for r in range(0, 16):
 		riff.append(perms[random.randint(0, 15)])
 	print('\nriff #{}:'.format(i + 1))
@@ -66,7 +65,7 @@ for i in range(0, RiffCount):
 	# print "header" of the tab notation
 	tabHeader(measures,beats)
 
-	#print the rhythm
+	# print the rhythm
 	djent = []
 	print(tuning_select[0],'|',end='')
 	for mm in range(1, measures + 1):
