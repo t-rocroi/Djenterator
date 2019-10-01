@@ -32,6 +32,16 @@ It then uses the random number generator to select a number in the range [1,16],
 
 Given 16 permutations, and a length of 4 measures, there are `16 * 16 * 16 * 16` combinations. This allows for a good length of unique practice phrases.
 
+### Supported Versions
+Tested at Python 3.7+
+
+### Running
+At the command line, run `python djenterator.py`
+
+1. type `std` and hit Enter
+1. type `1` and hit Enter
+1. type `4` and hit Enter
+
 ### Future plans
 I'd like to add some background key selection algorithm which would allow the generator to place notes instead of simple rhythmic markers, and would make the piece a lot easier to "understand". 
 
