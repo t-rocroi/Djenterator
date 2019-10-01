@@ -35,4 +35,4 @@ Given 16 permutations, and a length of 4 measures, there are `16 * 16 * 16 * 16`
 ### Future plans
 I'd like to add some background key selection algorithm which would allow the generator to place notes instead of simple rhythmic markers, and would make the piece a lot easier to "understand". 
 
-Another interesting idea would be to use digits of transcendentals such as *pi*, *phi*, or *e*. The idea would be to take enough digits from some pseudo-random section of the number trail, and then convert that number into Hex, since I need 16 permutatinos of 16th notes in order for each permuntation of 16th note to have an equal chance of getting selected and used.
+Another interesting idea would be to use digits of transcendentals such as *pi*, *phi*, or *e*. The idea would be to take enough digits from some pseudo-random section of the number trail, and then convert that number into Hex, since I need 16 permutations of 16th notes in order for each permutations of 16th note to have an equal chance of getting selected and used.
